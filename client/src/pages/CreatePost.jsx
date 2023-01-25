@@ -18,7 +18,9 @@ const CreatePost = () => {
     const [loading, setLoading] = useState(false);
 
     return (
-        <div>CreatePost</div>
+        <section className="max-w-7xl mx-auto">
+
+        </section>
     )
 }
 
