@@ -21,6 +21,10 @@ const CreatePost = () => {
 
     }
 
+    const handleChange = (e) => {
+
+    }
+
     return (
         <section className="max-w-7xl mx-auto">
             <div>
@@ -29,7 +33,27 @@ const CreatePost = () => {
             </div>
 
             <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+                <div className="flex flex-col gap-5">
+                    <FormField
+                        labelName="Your Name"
+                        type="text"
+                        name="name"
+                        placeholder="Ex., john doe"
+                        value={form.name}
+                        handleChange={handleChange}
+                    />
 
+                    <FormField
+                        labelName="Prompt"
+                        type="text"
+                        name="prompt"
+                        placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
+                        value={form.prompt}
+                        handleChange={handleChange}
+                        isSurpriseMe
+                        handleSurpriseMe={handleSurpriseMe}
+                    />
+                </div>
             </form>
         </section>
     )
